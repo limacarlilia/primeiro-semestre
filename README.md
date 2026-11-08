@@ -1,8 +1,8 @@
-# Página principal das atividades
+# Primeiro Semestre
 
-Catálogo público: https://limacarlilia.netlify.app/
+Catálogo público das atividades: https://limacarlilia.netlify.app/
 
-As atividades são organizadas por disciplina. Cada pasta contém sua própria página de atividades; os arquivos HTML de cada atividade ficam dentro da pasta correspondente.
+Cada disciplina tem sua própria pasta. Salve os materiais e arquivos HTML de cada atividade dentro da pasta correspondente.
 
 - [Bases Biológicas](./bases-biologicas/)
 - [Metodologia do Ensino dos Esportes](./metodologia-ensino-esportes/)

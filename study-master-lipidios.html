@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Study Master – Lipídios</title>
+<style>
+:root{--bg:#fbf8f1;--fg:#222;--card:#fff;--ac:#2b6cb0;--ok:#237a3b;--no:#b3261e;--bd:#d8d2c4}
+@media(prefers-color-scheme:dark){:root{--bg:#1c1d21;--fg:#eee;--card:#2a2c32;--ac:#7fb2f0;--ok:#6fd08a;--no:#ff8a80;--bd:#444}}
+html{font-size:18px}body{margin:0;background:var(--bg);color:var(--fg);font-family:Verdana,Arial,sans-serif;line-height:1.7}
+main{max-width:760px;margin:auto;padding:12px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+button{font:inherit;background:var(--card);color:var(--fg);border:2px solid var(--bd);border-radius:10px;padding:8px 12px;cursor:pointer}
+button.on,button.pri{background:var(--ac);color:#fff;border-color:var(--ac)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;margin:10px 0}
+h1,h2,h3{line-height:1.3}b,mark{background:#ffe38a;color:#222;padding:0 3px;border-radius:4px}
+.alt{display:block;width:100%;text-align:left;margin:6px 0}.alt.ok{border-color:var(--ok);background:#2a7a3b33}.alt.no{border-color:var(--no);background:#b3261e33}
+.bar{height:12px;background:var(--bd);border-radius:6px}.bar i{display:block;height:100%;background:var(--ok);border-radius:6px}
+.fc{min-height:120px;text-align:center;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem}
+ul.mm{list-style:none;padding-left:16px;border-left:3px solid var(--ac)}ul.mm li{margin:4px 0}
+svg{width:100%;height:auto;background:#fff;border-radius:8px;border:1px solid var(--bd)}small{opacity:.8}
+</style></head><body><main>
+<h1>🧠 Study Master – Lipídios</h1>
+<nav id="nav"></nav><div id="v"></div>
+<p><small>Material baseado no PDF UNIFICADOS (aula do professor). Imagens da prova são esquemas didáticos próprios, não fotografias. Meta de domínio: 90% (indicador de estudo, não nota oficial).</small></p>
+</main>
+<script>
+const CT=["Digestão de lipídios","Triglicerídeos e classificação","Lipoproteínas e aterosclerose","Membrana e fosfolipídios","Neurônio e mielina"];
+const AULA=[
+["Vitaminas <b>lipossolúveis</b>: A, D, E, K (solúveis em gordura). Vitamina D só é absorvida <b>com gordura</b> na refeição.","A digestão de gordura é <b>maior no intestino delgado</b>; no estômago é baixa (lipase gástrica); na boca é mínima e só na infância (lipase lingual).","<b>Bile</b>: feita no fígado, guardada na vesícula. Os <b>sais biliares emulsificam</b> (não são enzimas). Depois as <b>lipases</b> quebram.","Fosfolipídio → fosfolipase. Colesterol (éster) → colesterol esterase.","Macete: <b>bile = sabão</b> que espalha a gordura da panela; lipase = a esponja que limpa."],
+["Triglicerídeo = <b>glicerol + 3 ácidos graxos</b>. É a reserva de energia.","Lipídio <b>simples</b>: só C, H, O (triglicerídeo). <b>Complexo</b>: tem fósforo (fosfolipídio).","Na quebra: <b>ácidos graxos → ATP</b>; <b>glicerol → glicose</b>.","Gordura rende mais ATP (muito hidrogênio), mas o corpo usa carboidrato primeiro: é mais fácil de obter.","Macete: <b>fosfo</b> = fósforo = complexo."],
+["Lipoproteínas levam gordura pelo sangue (parte proteica é solúvel em água): <b>LDL, HDL, quilomícrons, VLDL</b>.","<b>LDL</b> leva gordura às paredes dos vasos. <b>HDL</b> faz a faxina e leva ao fígado ou intestino.","Quilomícron: TG <b>exógeno</b> (dieta). VLDL: TG <b>endógeno</b>.","Placa de ateroma + cálcio = parede rígida, vaso estreito, <b>pressão sobe</b>: risco de infarto e AVC.","Tratamento: estatinas e dieta; se não bastar, <b>stent</b> (malha que abre o vaso). Hipercolesterolemia genética exige medicação.","Macete: <b>L</b>DL = <b>L</b>eva pra parede; <b>H</b>DL = <b>H</b>igiene."],
+["Membrana tem <b>fosfolipídios e colesterol</b> (e carboidratos). Função: <b>permeabilidade seletiva</b>.","Fosfolipídio tem cabeça e cauda.","Água passa por <b>aquaporinas</b>; O₂ difunde direto; glicose precisa de <b>GLUT</b>.","Macete: membrana = <b>portaria do prédio</b>: decide quem entra."],
+["Neurônio: <b>corpo celular</b> (núcleo), <b>dendritos</b> (recebem), <b>axônio</b> (conduz), terminal axônico.","<b>Bainha de mielina</b> = esfingolipídio, funciona como isolante.","Nódulos de Ranvier: o impulso <b>salta</b> (condução saltatória) e fica mais rápido.","Sem mielina: condução contínua e mais lenta.","Macete: mielina = <b>capa do fio elétrico</b>."]];
+const FC=[["Quais são as vitaminas lipossolúveis?","A, D, E e K"],["Quem emulsifica a gordura?","Sais biliares (não são enzimas)"],["Enzima da gordura no estômago?","Lipase gástrica"],["Triglicerídeo é formado por…","Glicerol + 3 ácidos graxos"],["Glicerol vira…","Glicose (ácidos graxos viram ATP)"],["Lipídio complexo tem…","Fósforo (ex.: fosfolipídio)"],["Função do HDL?","Remove gordura das paredes e leva ao fígado/intestino"],["Quilomícron x VLDL?","Quilomícron: TG da dieta. VLDL: TG produzido no corpo"],["Como a glicose atravessa a membrana?","Com transportadores GLUT"],["Mielina é formada por…","Esfingolipídio; permite condução saltatória"]];
+/* [conteúdo,nível,enunciado,alternativas,certa,explicação,[desenho,x,y]] */
+const Q=[
+[4,"F","O ponto marca o revestimento do axônio. Qual lipídio forma essa estrutura?",["Triglicerídeo","Esfingolipídio","LDL","Quilomícron","Ácido graxo livre"],1,"A bainha de mielina é formada por <b>esfingolipídio</b>. Ela isola o axônio.",["n",145,60]],
+[4,"F","A região marcada contém o núcleo do neurônio. Qual é o nome dela?",["Corpo celular","Dendrito","Nódulo de Ranvier","Terminal axônico","Bainha de mielina"],0,"O núcleo fica no <b>corpo celular</b>.",["n",60,60]],
+[4,"M","O impulso nervoso “salta” entre pontos como o marcado. Qual o nome dele?",["Dendrito","Corpo celular","Bainha de mielina","Terminal axônico","Nódulo de Ranvier"],4,"Os <b>nódulos de Ranvier</b> são as falhas entre as bainhas. O impulso salta de um a outro.",["n",195,60]],
+[4,"M","A estrutura marcada recebe informações de outros neurônios. Qual é ela?",["Axônio","Dendrito","Nódulo de Ranvier","Esfingolipídio","Corpo da mielina"],1,"<b>Dendritos</b> recebem a informação e o axônio a conduz.",["n",28,37]],
+[4,"M","Em uma doença que destrói a estrutura marcada, o que se espera da condução?",["Mais rápida e saltatória","Inalterada","Mais lenta e contínua","Interrompida só nos dendritos","Mais rápida e contínua"],2,"Sem mielina a condução é <b>contínua e mais lenta</b>.",["n",145,60]],
+[4,"M","A estrutura marcada é comparável a qual elemento de um fio elétrico?",["O metal condutor","A capa isolante","A tomada","A bateria","O interruptor"],1,"A mielina funciona como <b>isolante</b>, como a capa do fio.",["n",145,60]],
+[4,"D","Sobre a condução no ponto marcado, assinale a correta.",["Ocorre porque o axônio não tem lipídios","Ocorre só nos dendritos","Torna a transmissão mais lenta","Depende de a mielina ser uma enzima","É saltatória e aumenta a velocidade do impulso"],4,"A condução saltatória pula entre nódulos e <b>acelera</b> o impulso. A mielina não é enzima.",["n",295,60]],
+[4,"D","I) A mielina é esfingolipídio. II) Sem mielina a condução é mais lenta. III) A mielina é uma enzima. Quais estão corretas?",["Somente I","Somente III","I e II","II e III","I, II e III"],2,"I e II estão certas. III é falsa: mielina é <b>lipídio</b>, não enzima.",["n",145,60]],
+[2,"F","O ponto marca um acúmulo de gordura na parede do vaso. Como se chama?",["Placa de ateroma","Quilomícron","Nódulo de Ranvier","Stent","Aquaporina"],0,"É a <b>placa de ateroma</b> (aterosclerose).",["v",210,100]],
+[2,"F","A partícula marcada leva gordura aos tecidos e às paredes dos vasos. Qual é a mais associada a isso?",["HDL","Glicose","LDL","Mielina","Lipase"],2,"O <b>LDL</b> leva gordura às paredes.",["v",80,60]],
+[2,"M","A partícula marcada remove gordura das paredes e leva ao fígado. Qual é ela?",["LDL","HDL","VLDL","Quilomícron","Fosfolipase"],1,"O <b>HDL</b> faz a “faxina”.",["v",360,50]],
+[2,"M","O espaço marcado ficou estreito. Qual a consequência direta para o sangue?",["Menos pressão","Mais velocidade sem pressão","Absorção maior de vitamina D","Precisa de mais pressão para passar","Digestão de gordura aumentada"],3,"Vaso estreito exige <b>mais pressão</b>: risco de infarto, AVC e hipertensão.",["v",210,55]],
+[2,"M","A placa marcada ficou calcificada. O que acontece com a remoção pelo HDL?",["Fica mais fácil","O HDL não consegue mais remover","Vira ATP no vaso","Vira glicose","Não muda"],1,"O cálcio deixa a placa rígida e o <b>HDL não consegue remover</b>.",["v",210,100]],
+[2,"M","A partícula marcada transporta triglicerídeos vindos da dieta. Qual é ela?",["HDL","LDL","Quilomícron","VLDL","Lipase"],2,"<b>Quilomícron</b> = TG exógeno. VLDL = TG endógeno.",["v",230,40]],
+[2,"D","Paciente com LDL sempre alto. Após 3 meses de dieta o valor cai pouco e não normaliza. A placa é a marcada. Qual a melhor interpretação?",["Falhou por preguiça","Provável fator genético; precisa de medicação","Dieta não importa","Só HDL baixo explica","Basta mais exercício"],1,"Hipercolesterolemia genética: dieta e exercício <b>não bastam</b>; usa-se medicação (ex.: estatina).",["v",210,100]],
+[2,"D","Quando dieta e medicação não resolvem, indica-se um procedimento que abre o vaso na região marcada. Qual?",["Emulsificação","Stent","Lipase","Aquaporina","Bile"],1,"O <b>stent</b> é uma malha que mantém o vaso aberto, mas pode fechar de novo.",["v",210,55]]];
+const MAC=["Bile = sabão da panela.","Fosfo = fósforo = complexo.","LDL leva, HDL higiene.","Membrana = portaria.","Mielina = capa do fio."];
+function draw(k,x,y){let b=k=="n"?`<circle cx="60" cy="60" r="22" fill="#bfe3c8"/><circle cx="60" cy="60" r="8" fill="#2d6a4f"/><g stroke="#2d6a4f" stroke-width="3"><path d="M42 48L15 25M40 70L12 95M38 60L8 60"/><path d="M82 60H395"/></g><g fill="#f2b84b"><rect x="105" y="48" width="80" height="24" rx="10"/><rect x="205" y="48" width="80" height="24" rx="10"/><rect x="305" y="48" width="80" height="24" rx="10"/></g><circle cx="405" cy="60" r="8" fill="#2d6a4f"/>`:`<rect y="8" width="420" height="16" fill="#d99"/><rect y="116" width="420" height="16" fill="#d99"/><rect y="24" width="420" height="92" fill="#fde1e1"/><path d="M120 116Q210 50 300 116Z" fill="#e3c24f"/><circle cx="80" cy="60" r="10" fill="#d33"/><circle cx="360" cy="50" r="10" fill="#3a9a6a"/><circle cx="230" cy="40" r="15" fill="#f0a030"/>`;
+return`<svg viewBox="0 0 420 ${k=="n"?120:140}" role="img" aria-label="Esquema didático de ${k=="n"?"neurônio":"vaso sanguíneo"} com ponto vermelho marcando o local perguntado">${b}<circle cx="${x}" cy="${y}" r="11" fill="none" stroke="#d00" stroke-width="3"/><circle cx="${x}" cy="${y}" r="3.5" fill="#d00"/></svg><small>Esquema didático próprio (não é foto real). Ponto vermelho = local perguntado.</small>`}
+let S;try{S=JSON.parse(localStorage.getItem("sm"))}catch(e){}S=S||{d:{},fs:18};
+const sv=()=>{try{localStorage.setItem("sm",JSON.stringify(S))}catch(e){}};
+const $=id=>document.getElementById(id),sh=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+document.documentElement.style.fontSize=S.fs+"px";
+const T={"Início":home,"Aula":aula,"Mapa":mapa,"Cartões":cards,"Prova":prova};
+function nav(n){$("nav").innerHTML=Object.keys(T).map(k=>`<button class="${k==n?"on":""}" onclick="nav('${k}')">${k}</button>`).join("")+`<button onclick="fs(-1)">A−</button><button onclick="fs(1)">A+</button>`;T[n]()}
+function fs(d){S.fs=Math.min(28,Math.max(14,S.fs+d*2));document.documentElement.style.fontSize=S.fs+"px";sv()}
+function home(){const n=Object.keys(S.d).length,ok=Object.values(S.d).filter(Boolean).length;$("v").innerHTML=`<div class="card"><h2>Bem-vinda, Carlilia!</h2><p>Sessão curta: <b>aula → cartões → prova</b>. Sem cronômetro: vá no seu ritmo.</p><div class="bar"><i style="width:${n/Q.length*100}%"></i></div><p>Progresso: ${n}/${Q.length} questões · ${ok} acertos ${ok>=5?"🏅":""}</p><button class="pri" onclick="nav('Aula')">Começar</button> <button onclick="if(confirm('Reiniciar tudo?')){S.d={};sv();home()}">Reiniciar</button></div>
+<div class="card"><b>Revisão espaçada:</b> dias 1, 3, 7 e 14. Refaça os cartões e as questões erradas.</div>`}
+function aula(){$("v").innerHTML=AULA.map((a,i)=>`<details class="card"><summary><b>${i+1}. ${CT[i]}</b></summary><ul>${a.map(p=>`<li>${p}</li>`).join("")}</ul></details>`).join("")}
+function mapa(){$("v").innerHTML=`<div class="card"><h2>🔬 Lipídios</h2><ul class="mm">${AULA.map((a,i)=>`<li><b>${CT[i]}</b><ul class="mm">${a.slice(0,-1).map(p=>`<li>${p}</li>`).join("")}</ul><mark>${MAC[i]}</mark></li>`).join("")}</ul></div>`}
+let fi=0,ff=false;function cards(){const c=FC[fi];$("v").innerHTML=`<p>Cartão ${fi+1}/${FC.length}. Tente lembrar antes de virar.</p><div class="card fc" onclick="ff=!ff;cards()">${ff?c[1]:c[0]}</div><button onclick="fi=(fi+FC.length-1)%FC.length;ff=false;cards()">←</button> <button class="pri" onclick="fi=(fi+1)%FC.length;ff=false;cards()">→</button>`}
+let P;function prova(){$("v").innerHTML=`<div class="card"><h2>Prova</h2><p>${Q.length} questões disponíveis (nesta versão: ${CT[4]} e ${CT[2]}, 8 cada). Distribuição: 2 fáceis, 4 médias, 2 difíceis por conteúdo.</p><button class="pri" onclick="go(Q.map((_,i)=>i))">Todas</button> <button onclick="go(Q.map((_,i)=>i).filter(i=>S.d[i]===false))">Só as erradas</button></div>`}
+function go(ids){if(!ids.length)return alert("Nada para refazer!");P={o:sh(ids),i:0};if(ids.length==Q.length)S.d={};q()}
+function q(){if(P.i>=P.o.length)return res();const id=P.o[P.i],x=Q[id],al=sh(x[3].map((t,j)=>[t,j==x[4]]));
+$("v").innerHTML=`<div class="bar"><i style="width:${P.i/P.o.length*100}%"></i></div><p><small>${CT[x[0]]} · ${x[1]=="F"?"Fácil":x[1]=="M"?"Média":"Difícil"} · ${P.i+1}/${P.o.length}</small></p>${draw(...x[6])}<p><b>${x[2]}</b></p><div id="al">${al.map((a,j)=>`<button class="alt" onclick="ans(${id},${j})">${"ABCDE"[j]}) ${a[0]}</button>`).join("")}</div><div id="fb"></div>`;P.al=al}
+function ans(id,j){const x=Q[id],al=P.al,ok=al[j][1];S.d[id]=ok;sv();document.querySelectorAll(".alt").forEach((b,k)=>{b.disabled=true;if(al[k][1])b.classList.add("ok");else if(k==j)b.classList.add("no")});
+$("fb").innerHTML=`<div class="card"><h3>${ok?"✅ Acertou!":"❌ Errou"}</h3><p>Correta: <b>${"ABCDE"[al.findIndex(a=>a[1])]}) ${x[3][x[4]]}</b></p><p>${x[5]}</p><p>💡 Macete: ${MAC[x[0]]}</p><button class="pri" onclick="P.i++;q()">Próxima</button></div>`}
+function res(){const by=(f)=>{const m={};P.o.forEach(i=>{const k=f(Q[i]);m[k]=m[k]||[0,0];m[k][1]++;if(S.d[i])m[k][0]++});return Object.entries(m).map(([k,v])=>`<li>${k}: ${v[0]}/${v[1]} (${Math.round(v[0]/v[1]*100)}%) ${v[0]/v[1]>=.9?"✅ dominado":"🔁 reforçar"}</li>`).join("")};
+const ok=P.o.filter(i=>S.d[i]).length,pc=Math.round(ok/P.o.length*100),er=P.o.filter(i=>!S.d[i]);
+$("v").innerHTML=`<div class="card"><h2>Resultado ${pc>=90?"🏆":"💪"}</h2><p>Acertos: <b>${ok}</b> · Erros: <b>${er.length}</b> · Aproveitamento: <b>${pc}%</b> (meta 90%)</p><h3>Por dificuldade</h3><ul>${by(x=>x[1]=="F"?"Fácil":x[1]=="M"?"Média":"Difícil")}</ul><h3>Por assunto</h3><ul>${by(x=>CT[x[0]])}</ul>${er.length?`<h3>Revisar</h3>${er.map(i=>`<p>• ${Q[i][2]}<br><small>${Q[i][5]}</small></p>`).join("")}<button class="pri" onclick="go(${JSON.stringify(er)})">Refazer só as erradas</button>`:"<p>Parabéns! Revise de novo nos dias 3, 7 e 14.</p>"}</div>`}
+nav("Início");
+</script></body></html>
+

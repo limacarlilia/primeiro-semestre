@@ -3,22 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Primeiro Semestre — Atividades</title>
+<meta name="theme-color" content="#071d49">
+<meta name="description" content="Atividades e materiais do primeiro semestre.">
+<title>Primeiro Semestre | Unileão Digital</title>
 <style>
-:root{font-family:system-ui,Segoe UI,Arial,sans-serif;color-scheme:light dark}body{max-width:760px;margin:0 auto;padding:32px 20px;line-height:1.6}h1{font-size:1.8rem}ul{padding-left:1.25rem}li{margin:1rem 0}a{font-size:1.1rem}
+:root{color-scheme:light;--navy:#071d49;--purple:#7428e8;--cyan:#21d6e8;--ink:#20283a;--muted:#68758a;--line:#e3e8f1;--surface:#fff;--page:#f4f6fb;--shadow:0 12px 32px rgba(16,39,82,.09);font-family:Inter,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--page);color:var(--ink);line-height:1.5}.topbar{background:linear-gradient(110deg,#071d49,#102a60 68%,#35216e);color:white}.topbar-inner{max-width:1180px;margin:auto;padding:21px 28px;display:flex;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:white}.brand img{display:block;width:190px;height:auto;max-height:76px;object-fit:contain}.brand-caption{border-left:1px solid rgba(255,255,255,.35);padding-left:17px;font-size:.85rem;color:#dce7ff;letter-spacing:.03em}
+main{max-width:1180px;margin:0 auto;padding:34px 28px 64px}.crumb{font-size:.85rem;color:var(--muted);margin:0 0 18px}.semester{position:relative;overflow:hidden;background:linear-gradient(115deg,var(--navy),#173872 70%,#30246c);color:#fff;border-radius:18px;padding:27px 32px;box-shadow:var(--shadow);margin-bottom:30px}.semester:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:8%;top:-135px;box-shadow:0 0 0 28px rgba(255,255,255,.035),0 0 0 58px rgba(255,255,255,.025)}.semester-label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#a5ecf6;font-weight:700}h1{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.15;margin:5px 0 0;position:relative;z-index:1}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 17px}h2{font-size:1.2rem;margin:0;color:var(--navy)}.section-note{font-size:.9rem;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{display:flex;flex-direction:column;min-height:192px;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:21px 21px 18px;text-decoration:none;color:inherit;box-shadow:0 4px 14px rgba(17,38,77,.035);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c5d1e5}.card:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#edf1ff;color:var(--navy);font-size:1.25rem}.card:nth-child(3n+2) .icon{background:#f2ebff;color:var(--purple)}.card:nth-child(3n) .icon{background:#e6fbfc;color:#087c8c}.arrow{font-size:1.2rem;color:#8794aa}.card h3{font-size:1rem;line-height:1.35;margin:0;color:var(--navy);font-weight:700}.card p{font-size:.88rem;color:var(--muted);margin:8px 0 0}.card .open{margin-top:auto;padding-top:16px;font-size:.82rem;color:var(--purple);font-weight:700}footer{max-width:1180px;margin:0 auto;padding:0 28px 28px;color:#788397;font-size:.8rem}
+@media(max-width:820px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){.topbar-inner{padding:17px 18px}.brand img{width:154px}.brand-caption{font-size:.75rem;padding-left:12px}main{padding:24px 18px 44px}.semester{padding:23px}.grid{grid-template-columns:1fr;gap:12px}.card{min-height:160px;padding:18px}.section-head{display:block}.section-note{margin-top:5px}footer{padding:0 18px 24px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header><h1>Primeiro Semestre</h1></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="./" aria-label="Unileão Digital — página inicial"><img src="./assets/unileao-digital.png" alt="Unileão UniVS Digital"><span class="brand-caption">Área de atividades</span></a></div></header>
 <main>
-<ul>
-<li><a href="./bases-biologicas/">Bases Biológicas</a></li>
-<li><a href="./metodologia-ensino-esportes/">Metodologia do Ensino dos Esportes</a></li>
-<li><a href="./reflexoes-historicas-filosoficas-ef/">Reflexões Históricas e Filosóficas da Educação Física</a></li>
-<li><a href="./anatomia-humana/">Anatomia Humana</a></li>
-<li><a href="./bioquimica-basica/">Bioquímica Básica</a></li>
-<li><a href="./estagio-curricular-observacional-i/">Estágio Curricular Observacional I</a></li>
-</ul>
-</main>
-</body>
-</html>
+<p class="crumb">Início <span aria-hidden="true">›</span> Primeiro Semestre</p>
+<section class="semester" aria-labelledby="semester-title"><div class="semester-label">Meu percurso acadêmico</div><h1 id="semester-title">1º Semestre</h1></section>
+<section aria-labelledby="disciplines-title"><div class="section-head"><h2 id="disciplines-title">Disciplinas</h2><p class="section-note">Acesse os conteúdos e atividades de cada disciplina.</p></div>
+<div class="grid">
+<a class="card" href="./bases-biologicas/"><span class="card-top"><span class="icon" aria-hidden="true">◈</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Bases Biológicas</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+<a class="card" href="./metodologia-ensino-esportes/"><span class="card-top"><span class="icon" aria-hidden="true">◉</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Metodologia do Ensino dos Esportes</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+<a class="card" href="./reflexoes-historicas-filosoficas-ef/"><span class="card-top"><span class="icon" aria-hidden="true">⌘</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Reflexões Históricas e Filosóficas da Educação Física</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+<a class="card" href="./anatomia-humana/"><span class="card-top"><span class="icon" aria-hidden="true">✳</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Anatomia Humana</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+<a class="card" href="./bioquimica-basica/"><span class="card-top"><span class="icon" aria-hidden="true">⚗</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Bioquímica Básica</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+<a class="card" href="./estagio-curricular-observacional-i/"><span class="card-top"><span class="icon" aria-hidden="true">▣</span><span class="arrow" aria-hidden="true">↗</span></span><h3>Estágio Curricular Observacional I</h3><p>Materiais de estudo e atividades</p><span class="open">Acessar disciplina →</span></a>
+</div></section></main><footer>Primeiro Semestre · Organização de conteúdos acadêmicos</footer></body></html>
